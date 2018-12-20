@@ -1,7 +1,5 @@
 # gitsh
 
-======
-
 A customized bash shell for working closely with git
 
 The `gitsh` command starts an interactive bash shell tweaked for heavy git
@@ -18,27 +16,7 @@ interaction:
   * Runs on top of normal bash (`~/.bashrc`) and
     readline (`~/.inputrc`) configurations.
 
-Installation
-------------
-
-Install the most recent available version under `/usr/local`:
-
-    $ git clone git://gitlab.com/thornjad/gitsh.git
-    $ cd gitsh
-    $ make
-    $ sudo make install
-
-Start a shell with `gitsh`:
-
-    $ gitsh
-
-Use the `PREFIX` environment variable to specify a different install location.
-For example, under `~/bin`:
-
-    $ make install PREFIX=~
-
-Basic Usage
------------
+## Basic Usage
 
 Typical usage is to change into a git working copy and then start the shell:
 
@@ -63,8 +41,7 @@ _IMPORTANT: `rm`, `mv`, and `diff` are aliased to their git counterparts. To use
 system versions, run `command(1)` (e.g., `command rm`) or qualify the command
 (e.g. `/bin/rm`)._
 
-Prompt
-------
+## Prompt
 
 The default prompt shows username, hostname, SSH status, then the relative path
 to the current working directory from the root of the work tree, then the branch
@@ -87,8 +64,7 @@ and `color.sh.dirty` git config values:
 
 See [colors in git](http://scie.nti.st/2007/5/2/colors-in-git) for information.
 
-Customizing
------------
+## Customizing
 
 Most `gitsh` behavior can be configured by editing the user or system gitconfig
 files (`~/.gitconfig`) either by hand or using `git-config(1)`. The `[alias]`
@@ -97,8 +73,7 @@ section is used to create basic command aliases.
 The `~/.bashrc` file is sourced before `~/.gitshrc`. Any bash customizations
 defined there and not explicitly overridden by `gitsh` are also available.
 
-License
--------
+## License
 
 Copyright 2018 [Jade Michael Thornton](https://jmthornton.net)
 
