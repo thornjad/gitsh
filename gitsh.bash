@@ -355,13 +355,13 @@ gitalias melog='git log --committer="`git config user.name`"'
 # git add and the staging area
 gitalias a='git add'
 gitalias aa='git add -A'          # mnemonic: "add all"
-gitalias ap='git add -A --patch'
+gitalias ap='git add -A --patch' # add patch
 gitalias stage='git add'
 gitalias unstage='git reset HEAD'
 
 # commits and history
-gitalias ci='git commit --verbose'
-gitalias cm='git commit --verbose -m'
+gitalias c='git commit --verbose' # commit
+gitalias cm='git commit --verbose -m' # commit message
 gitalias camend='git commit --verbose --amend'
 gitalias re='git rebase --interactive --autostash'
 gitalias r='git rebase --autostash'
