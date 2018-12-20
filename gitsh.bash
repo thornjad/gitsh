@@ -253,7 +253,7 @@ _git_workdir() {
 
 # get system info for a more useful prompt (especially over ssh)
 _git_sysinfo() {
-	local host=`hostname`
+	local host=`hostname -s`
 	local user=`whoami`
 	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 		local prefix="["
