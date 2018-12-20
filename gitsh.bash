@@ -56,7 +56,7 @@ exec /usr/bin/env bash --rcfile "$0" "$@"
 #   gitcomplete c  checkout
 gitcomplete() {
 	local alias="$1" command="$2"
-	complete -o default -o nospace -F _git_${command//-/_} $alias
+	complete -o bashdefault -o default -o nospace -F _git_${command//-/_} $alias
 }
 
 # gitalias <alias>='<command> [<args>...]'
@@ -343,7 +343,6 @@ gitalias bb='git checkout -b'
 gitalias co='git checkout'
 gitalias f='git fetch --prune'
 gitalias k='git cherry-pick'
-gitalias r='git remote'
 gitalias s='git status'
 gitalias master='git checkout master && git pull --rebase --autostash'
 gitalias p='git push'
@@ -364,13 +363,14 @@ gitalias unstage='git reset HEAD'
 gitalias ci='git commit --verbose'
 gitalias cm='git commit --verbose -m'
 gitalias camend='git commit --verbose --amend'
-gitalias re='git rebase --interactive'
+gitalias re='git rebase --interactive --autostash'
+gitalias r='git rebase --autostash'
 gitalias peek='git log -p --max-count=1'
 
 # git fetch
 gitalias f='git fetch'
-gitalias pm='git pull'          # mnemonic: pull merge
-gitalias pr='git pull --rebase' # mnemonic: pull rebase
+gitalias pm='git pull --autostash'          # mnemonic: pull merge
+gitalias pr='git pull --rebase --autostash' # mnemonic: pull rebase
 
 # git diff
 gitalias df='git diff'
