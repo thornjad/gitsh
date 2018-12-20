@@ -237,7 +237,7 @@ _git_upstream_state() {
 		*"	0") # behind upstream
 			p=" (-${count%	0})" ;;
 		*) # diverged from upstream
-			p=" (+${count#*	} -${count%	*})" ;;
+			p=" (+${count#*	}-${count%	*})" ;;
 	esac
 
 	_git_apply_color "$p" "color.sh.upstream-state" "yellow"
