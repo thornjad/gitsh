@@ -347,6 +347,7 @@ gitalias s='git status'
 gitalias master='git checkout master && git pull --rebase --autostash'
 gitalias p='git push'
 gitalias unfuck='git fsck && git remote prune origin && git gc'
+gitalias g='git grep'
 
 # log
 gitalias l='git log --graph --abbrev-commit --decorate'
