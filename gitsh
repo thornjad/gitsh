@@ -350,7 +350,7 @@ gitalias unfuck='git fsck && git remote prune origin && git gc'
 gitalias g='git grep'
 
 # log
-gitalias l='git log --graph --abbrev-commit --decorate'
+gitalias l='git log --graph --oneline --abbrev-commit --decorate'
 gitalias melog='git log --committer="`git config user.name`"'
 
 # git add and the staging area
