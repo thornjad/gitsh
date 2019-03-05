@@ -340,7 +340,10 @@ complete -o default -o nospace -F _git_main help
 
 gitalias b='git branch'
 gitalias bb='git checkout -b'
+gitalias bck='git checkout @{-1}'
+gitalias sbck='git stash push && git checkout @{-1}'
 gitalias co='git checkout'
+
 gitalias f='git fetch --prune'
 gitalias k='git cherry-pick'
 gitalias s='git status'
