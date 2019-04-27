@@ -76,7 +76,6 @@ defined there and not explicitly overridden by `gitsh` are also available.
 ## License
 
 Copyright 2018-2019 [Jade Michael Thornton](https://jmthornton.net)
-
 Copyright 2008 [Ryan Tomayko](http://tomayko.com/) and [Aristotle
 Pagaltzis](http://plasmasturm.org/)
 

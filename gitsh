@@ -24,7 +24,7 @@
 # Distributed under the GNU General Public License, version 2.0.
 
 # use to install the sh alias
-[[ $1 = '--configure' && $# = 1 ]] && {
+[[ "$1" = '--configure' && $# = 1 ]] && {
 	set -e
 	git config --global alias.sh '!gitsh'
 	echo "alias 'sh' added to ~/.gitconfig"
@@ -45,6 +45,9 @@ exec /usr/bin/env bash --rcfile "$0" "$@"
 
 
 # ALIASES + COMPLETION =========================================================
+
+# set up completion using local script rather than trusting a system script
+source ./git-completion.bash
 
 # gitcomp <alias> <command>
 #
